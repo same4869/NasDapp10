@@ -97,7 +97,7 @@ $(function () {
         if(huluwas[i] && huluwas[i].owner){
             console.log("i:"+ i + " requestOwner:" + huluwas[i].requestOwner + " owner:" + huluwas[i].owner + " curWallectAdd:" + curWallectAdd);
             if(curWallectAdd === huluwas[i].owner && huluwas[i].requestOwner && huluwas[i].requestOwner !== undefined && huluwas[i].requestOwner !== huluwas[i].owner){
-                $($(".request_page .request_tip_p")[i]).text(huluwas[i].requestWords + "<br>" + huluwas[i].requestOwner)
+                $($(".request_page .request_tip_p")[i]).text(huluwas[i].requestWords + "\n" + huluwas[i].requestOwner)
             }else{
                 $($(".request_page .salads")[i]).css("display", "none")
             }
