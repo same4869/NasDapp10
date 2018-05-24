@@ -13,3 +13,6 @@
     word-wrap: break-word;
     white-space: initial;
 }
+.request_tip_p {
+    margin-bottom: -17px !important;
+}
