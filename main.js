@@ -84,7 +84,7 @@ $(function () {
             $($(".market_page .button.small.yellow-p")[i]).text("TA的主人：" + huluwas[i].owner);
             if(curWallectAdd !== huluwas[i].owner){
                 $($(".my_page .salads")[i]).css("display", "none")
-                $($(".market_page .button.small.yellow")[i]).text("索要")
+                $($(".market_page .button.small.yellow span")[i]).text("索要")
             }else{
                 $($(".market_page .button.small.yellow")[i]).css("display", "none")
                 iHaveItem.push(i);
@@ -95,7 +95,7 @@ $(function () {
 
         if(huluwas[i] && huluwas[i].owner){
             console.log("i:"+ i + " requestOwner:" + huluwas[i].requestOwner);
-            if(curWallectAdd === huluwas[i].owner && !huluwas[i].requestOwner && huluwas[i].requestOwner !== undefined){
+            if(curWallectAdd === huluwas[i].owner && !huluwas[i].requestOwner && huluwas[i].requestOwner !== undefined && huluwas[i].requestOwner !== huluwas[i].owner){
                 $($(".request_page .request_tip_p")[i]).text(huluwas[i].requestWords + "<br>" + huluwas[i].requestOwner)
             }else{
                 $($(".request_page .salads")[i]).css("display", "none")
@@ -109,8 +109,8 @@ $(function () {
 
     $(".market_page .button.small.yellow").on("click", function(event) {
         var currentIndex = event.currentTarget.id;
-        console.log("currentIndex:" + currentIndex);
-        if($(".market_page .button.small.yellow span")[0].innerHTML === "索要"){
+        console.log("currentIndex:" + currentIndex + " text:" + $(".market_page .button.small.yellow span")[currentIndex].innerHTML);
+        if($(".market_page .button.small.yellow span")[currentIndex].innerHTML === "索要"){
             bootbox.prompt("请给对方填写索要请求理由~", function(result){
                 console.log(result); 
                 if(result !== null && result !== ""){
