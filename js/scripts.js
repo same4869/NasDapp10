@@ -245,7 +245,7 @@ function ON_LOAD(){
         });
     },0);
     
-    setTimeout(function(){  $('body').css({'overflow':'visible'}); },300);    
+    // setTimeout(function(){  $('body').css({'overflow':'visible'}); },300);    
     addAllListeners();
     $(window).trigger('resize');
 }

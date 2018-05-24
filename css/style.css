@@ -60,6 +60,7 @@ h6 {
 }
 p {
 	margin: 0 0 15px 0;
+	color: white;
 }
 .color_yellow {
 	color: #f3ff3a;
@@ -192,7 +193,7 @@ a.und:hover, .und a:hover {
 /*LOGO*/
 .logo {
 	margin-bottom:10px;
-	margin-top:50px;
+	margin-top:0px;
 	display:block;
 	margin-left:13%;
 }
@@ -214,7 +215,7 @@ header, footer {
 	position:relative;
 	z-index:333;
 	width:100%;
-	margin-bottom:10px;
+	margin-bottom:0px;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
 	border-radius:5px;
@@ -224,6 +225,7 @@ header, footer {
 	width: 100%;
 	height: 100%;
 	left: -5px;
+	margin: 0;
 }
 #menu>li {
 	padding:20px 36px;
@@ -304,9 +306,9 @@ select {
 }
 #content>ul {
 	position: relative;
-	top: 32%;
+	top: 27%;
 	width:100%;
-	height:430px;
+	height:450px;
 	overflow: hidden;
 }
 #content>ul>li.no_bg {
@@ -361,7 +363,7 @@ select {
 	margin:0;
 }
 #ts-display-pf-col li {
-	width:265px;
+	width:245px;
 	float:left
 }
 #ts-display-pf-col li.nomargin {
@@ -460,7 +462,7 @@ select {
 }
 .image-grid li {
 	width: 265px;
-	margin: 0 30px 30px 0;
+	margin: 0 20px 30px 0;
 	float: left;
 	height:170px;
 	overflow: hidden;

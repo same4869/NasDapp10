@@ -84,9 +84,10 @@ $(function () {
             $($(".market_page .button.small.yellow-p")[i]).text("TA的主人：" + huluwas[i].owner);
             if(curWallectAdd !== huluwas[i].owner){
                 $($(".my_page .salads")[i]).css("display", "none")
-                $($(".market_page .button.small.yellow span")[i]).text("索要")
+                $($(".market_page .button.small.yellow span")[i]).text("求赠送")
             }else{
-                $($(".market_page .button.small.yellow")[i]).css("display", "none")
+                $($(".market_page .button.small.yellow")[i]).css("display", "none");
+                $($(".market_page .button.small.yellow-p")[i]).text("您现在是本娃的主人哦！^_*");
                 iHaveItem.push(i);
             }
         }else{
@@ -95,7 +96,7 @@ $(function () {
 
         if(huluwas[i] && huluwas[i].owner){
             console.log("i:"+ i + " requestOwner:" + huluwas[i].requestOwner + " owner:" + huluwas[i].owner + " curWallectAdd:" + curWallectAdd);
-            if(curWallectAdd === huluwas[i].owner && huluwas[i].requestOwner !== undefined && huluwas[i].requestOwner !== huluwas[i].owner){
+            if(curWallectAdd === huluwas[i].owner && huluwas[i].requestOwner && huluwas[i].requestOwner !== undefined && huluwas[i].requestOwner !== huluwas[i].owner){
                 $($(".request_page .request_tip_p")[i]).text(huluwas[i].requestWords + "<br>" + huluwas[i].requestOwner)
             }else{
                 $($(".request_page .salads")[i]).css("display", "none")
@@ -110,8 +111,8 @@ $(function () {
     $(".market_page .button.small.yellow").on("click", function(event) {
         var currentIndex = event.currentTarget.id;
         console.log("currentIndex:" + currentIndex + " text:" + $(".market_page .button.small.yellow span")[currentIndex].innerHTML);
-        if($(".market_page .button.small.yellow span")[currentIndex].innerHTML === "索要"){
-            bootbox.prompt("请给对方填写索要请求理由~", function(result){
+        if($(".market_page .button.small.yellow span")[currentIndex].innerHTML === "求赠送"){
+            bootbox.prompt("请给对方填写1个赠送给你的理由~", function(result){
                 console.log(result); 
                 if(result !== null && result !== ""){
                    var currentIndex = event.currentTarget.id;
