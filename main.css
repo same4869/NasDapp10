@@ -16,3 +16,18 @@
 .request_tip_p {
     margin-bottom: -17px !important;
 }
+.bootbox-prompt .modal-header{
+    background-color: rebeccapurple;
+}
+.bootbox-prompt .modal-header button {
+    display: none;
+}
+.bootbox-alert .modal-body {
+    background-color: rebeccapurple;
+}
+.bootbox-alert .modal-body button {
+    display: none;
+}
+#noExtension {
+    color: white;
+}
