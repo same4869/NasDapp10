@@ -3,6 +3,14 @@
 /* Getting the new tags to behave */
 
 /*GLOBAL*/
+.wang-xun-post {
+	display: flex;
+}
+.wang-xun-post img {
+	width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
 body {
 	position:absolute;
 	font:12px/18px 'OpenSansRegular';
@@ -63,7 +71,7 @@ p {
 	color: white;
 }
 .color_yellow {
-	color: #f3ff3a;
+	color: #33bbff;
 }
 .color_black {
 	color: #161515;
@@ -104,7 +112,7 @@ p {
 	margin-bottom:10px;
 }
 .pic:hover {
-	background:#f3ff3a;
+	background:#33bbff;
 	-moz-transition: all 0.2s linear 0s;
 	-webkit-transition: all 0.2s linear 0s;
 	-o-transition: all 0.2s linear 0s;
@@ -246,7 +254,7 @@ header, footer {
 	text-transform:uppercase;
 }
 #menu>li>a:hover, #menu>li.active>a, #menu>li.sfHover {
-	color: #f3ff3a;
+	color: #33bbff;
 }
 .submenu_1 {
 	position:absolute;
@@ -392,7 +400,7 @@ select {
 }
 .ts-display-pf-img .pftag {
 	display:block;
-	background:#f3ff3a;
+	background:#33bbff;
 	opacity:0.9;
 	position:absolute;
 	z-index:11;
@@ -845,10 +853,10 @@ button.button:active, .button:active, .button.active {
 	background-color: #666666;
 }
 .button.yellow {
-	background-color: #f3ff3a;
+	background-color: #33bbff;
 }
 .button.yellow:hover {
-	background-color: #efff00;
+	background-color: #33eeff;
 }
 .button.white {
 	background-color: #FFFFFF;
@@ -947,7 +955,7 @@ input, select, textarea {
 	position: relative;
 	width: 314px;
 	height: 4px;
-	background: #f3ff3a;
+	background: #33bbff;
 	cursor: pointer;
 }
 .thumb2 {

@@ -56,7 +56,7 @@ height:150px;
 }
 .ts-display-pf-img .pftag {
  display:block;
- background:#f3ff3a;
+ background:#33bbff;
  opacity:0.9;
  position:absolute;
  z-index:11;
@@ -269,7 +269,7 @@ left: 5px;
 #form1 .error, #form1 .empty {
 display:none;
 font-size:9px;
-color:#f3ff3a;
+color:#33bbff;
 margin-left: 3px;
 top: -2px;
 position: relative;

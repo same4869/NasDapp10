@@ -4,9 +4,9 @@ $(function () {
     var NebPay;
     var nebPay;
     var nebulas;
-    dappContactAddress = "n1k4UB3EVEwsY7C1abZ2TdY8yW1dpKFyUkm";
+    dappContactAddress = "n1m97EvuKzuj5RuviYSCeBNdKgouAZCvYcy";
     nebulas = require("nebulas"), neb = new nebulas.Neb();
-    neb.setRequest(new nebulas.HttpRequest("https://testnet.nebulas.io"));
+    neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
     
     NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
     nebPay = new NebPay();	
@@ -52,13 +52,13 @@ $(function () {
     }
 
 
-    function getAllHuluwaMap(){
+    function getAllQiuxingMap(){
         var from = dappContactAddress;
         var value = "0";
         var nonce = "0";
         var gas_price = "1000000";
         var gas_limit = "20000000";
-        var callFunction = "getAllHuluwaMap";
+        var callFunction = "getAllQiuxingMap";
         var callArgs = "";
         //console.log("callFunction:" + callFunction + " callArgs:" + callArgs);
         var contract = {
@@ -69,7 +69,7 @@ $(function () {
         var result = resp.result;   
         console.log("result : " + result);
         result = JSON.parse(result);
-        setHuluwaProperties(result);
+        setQiuxingProperties(result);
 
     }).catch(function (err) {
         console.log("error :" + err.message);
@@ -77,27 +77,27 @@ $(function () {
         getWallectInfo()
    }
 
-   function setHuluwaProperties(huluwas) {
-    console.log(huluwas);
-    for (var i = 0; i < huluwas.length; i++) {
-        if (huluwas[i] && huluwas[i].owner) {
-            $($(".market_page .button.small.yellow-p")[i]).text("TA的主人：" + huluwas[i].owner);
-            if(curWallectAdd !== huluwas[i].owner){
+   function setQiuxingProperties(Qiuxings) {
+    console.log(Qiuxings);
+    for (var i = 0; i < Qiuxings.length; i++) {
+        if (Qiuxings[i] && Qiuxings[i].owner) {
+            $($(".market_page .button.small.yellow-p")[i]).text("TA的主人：" + Qiuxings[i].owner);
+            if(curWallectAdd !== Qiuxings[i].owner){
                 $($(".my_page .salads")[i]).css("display", "none")
                 $($(".market_page .button.small.yellow span")[i]).text("求赠送")
             }else{
                 $($(".market_page .button.small.yellow")[i]).css("display", "none");
-                $($(".market_page .button.small.yellow-p")[i]).text("您现在是本娃的主人哦！^_*");
+                $($(".market_page .button.small.yellow-p")[i]).text("您现在是该球星卡的主人哦！^_*");
                 iHaveItem.push(i);
             }
         }else{
             $($(".my_page .salads")[i]).css("display", "none")
         }
 
-        if(huluwas[i] && huluwas[i].owner){
-            console.log("i:"+ i + " requestOwner:" + huluwas[i].requestOwner + " owner:" + huluwas[i].owner + " curWallectAdd:" + curWallectAdd);
-            if(curWallectAdd === huluwas[i].owner && huluwas[i].requestOwner && huluwas[i].requestOwner !== undefined && huluwas[i].requestOwner !== huluwas[i].owner){
-                $($(".request_page .request_tip_p")[i]).text(huluwas[i].requestWords + "\n" + huluwas[i].requestOwner)
+        if(Qiuxings[i] && Qiuxings[i].owner){
+            console.log("i:"+ i + " requestOwner:" + Qiuxings[i].requestOwner + " owner:" + Qiuxings[i].owner + " curWallectAdd:" + curWallectAdd);
+            if(curWallectAdd === Qiuxings[i].owner && Qiuxings[i].requestOwner && Qiuxings[i].requestOwner !== undefined && Qiuxings[i].requestOwner !== Qiuxings[i].owner){
+                $($(".request_page .request_tip_p")[i]).text(Qiuxings[i].requestWords + "\n" + Qiuxings[i].requestOwner)
             }else{
                 $($(".request_page .salads")[i]).css("display", "none")
             }
@@ -112,16 +112,16 @@ $(function () {
         var currentIndex = event.currentTarget.id;
         console.log("currentIndex:" + currentIndex + " text:" + $(".market_page .button.small.yellow span")[currentIndex].innerHTML);
         if($(".market_page .button.small.yellow span")[currentIndex].innerHTML === "求赠送"){
-            bootbox.prompt("请给对方填写1个赠送给你的理由~", function(result){
+            bootbox.prompt("请给对方填写一个赠送给你的理由~", function(result){
                 console.log(result); 
                 if(result !== null && result !== ""){
                    var currentIndex = event.currentTarget.id;
                    console.log("currentIndex:" + currentIndex);
-                   requestAHuluwa(currentIndex, result);
+                   requestAQiuxing(currentIndex, result);
                 }
            });
         }else{
-            ownAHuluwa(currentIndex);
+            ownAQiuxing(currentIndex);
         }
     });
 
@@ -132,7 +132,7 @@ $(function () {
             if(result !== null && result !== ""){
                var currentIndex = event.currentTarget.id;
                console.log("currentIndex:" + currentIndex);
-               sendAHuluwa(currentIndex, result);
+               sendAQiuxing(currentIndex, result);
             }
        });
     });
@@ -140,13 +140,13 @@ $(function () {
     $(".request_page .button.small.yellow").on("click", function(event) {
         var currentIndex = event.currentTarget.id;
         console.log("currentIndex:" + currentIndex);
-        agreeAHuluwa(currentIndex);
+        agreeAQiuxing(currentIndex);
     });
 
-    function agreeAHuluwa(currentIndex){
+    function agreeAQiuxing(currentIndex){
         var to = dappContactAddress;
         var value = "0";
-        var callFunction = "agreeAHuluwa";
+        var callFunction = "agreeAQiuxing";
         var callArgs = "[\"" + currentIndex + "\"]";
         console.log(callArgs);
         serialNumber = nebPay.call(to, value, callFunction, callArgs, { 
@@ -158,10 +158,10 @@ $(function () {
         }); 
     }
 
-    function sendAHuluwa(currentIndex, result){
+    function sendAQiuxing(currentIndex, result){
         var to = dappContactAddress;
         var value = "0";
-        var callFunction = "sendAHuluwa";
+        var callFunction = "sendAQiuxing";
         var callArgs = "[\"" + currentIndex + "\",\"" + result + "\"]";
         console.log(callArgs);
         serialNumber = nebPay.call(to, value, callFunction, callArgs, { 
@@ -173,10 +173,10 @@ $(function () {
         }); 
     }
 
-    function requestAHuluwa(currentIndex, content){
+    function requestAQiuxing(currentIndex, content){
         var to = dappContactAddress;
         var value = "0";
-        var callFunction = "requestAHuluwa";
+        var callFunction = "requestAQiuxing";
         var callArgs = "[\"" + currentIndex + "\",\"" + content + "\"]";
         console.log(callArgs);
         serialNumber = nebPay.call(to, value, callFunction, callArgs, { 
@@ -184,15 +184,15 @@ $(function () {
                         console.log("thecallback is " + resp)
                         //upadte card status into in progress...
                         // disableSendButton(currentIndex);
-                        bootbox.alert("已经向葫芦娃主人申请，对方确认后这只就是您的了~");
+                        bootbox.alert("已经向球星卡主人申请，对方确认后这只就是您的了~");
                 }
         }); 
     }
 
-    function ownAHuluwa(index){
+    function ownAQiuxing(index){
         var to = dappContactAddress;
         var value = "0";
-        var callFunction = "haveAHuluwa";
+        var callFunction = "haveAQiuxing";
         var callArgs = "[\"" + index + "\"]";
         console.log(callArgs);
         serialNumber = nebPay.call(to, value, callFunction, callArgs, { 
@@ -206,7 +206,7 @@ $(function () {
 
     function disableGetButton(index) {
         console.log(index);
-        $($(".market_page .button.small.yellow")[index]).text("领养中...").attr("disabled","disabled");
+        $($(".market_page .button.small.yellow")[index]).text("领取中...").attr("disabled","disabled");
     }
 
     function disableSendButton(index) {
@@ -228,6 +228,6 @@ $(function () {
         }
     });
 
-    console.log("getAllHuluwaMap");
-    getAllHuluwaMap()
+    console.log("getAllQiuxingMap");
+    getAllQiuxingMap()
 })
