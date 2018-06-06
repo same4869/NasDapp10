@@ -1,595 +1,314 @@
-<!DOCTYPE HTML>
-<html lang="cn">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>世界杯星云球星卡</title>
-	<meta name="robots" content="index, follow" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-	<meta name="author" content="" />
+    <meta charset="UTF-8">
+    <title>星云世界杯明星卡</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/petshow.css?6">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script type="text/javascript" src="./dist/nebulas.js"></script>
+    <script type="text/javascript" src="./dist/nebPay.js"></script>
+    <script src="js/amazeui.min.js"></script>
+    <script src="js/countUp.min.js"></script>
+    <script src="js/amazeui.lazyload.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 
-<!-- ========================  CSS Files  ========================== -->
-<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
-<link rel="stylesheet" type="text/css" href="css/slider.css" />
-<link rel="stylesheet" type="text/css" href="css/responsive.css" />
-<link rel="stylesheet" type="text/css" href="main.css" />
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-<!-- ========================  JS Files  =========================== -->
-<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-<script type="text/javascript" src="./dist/nebulas.js"></script>
-<script type="text/javascript" src="./dist/nebPay.js"></script>
-<script type="text/javascript" src="main.js"></script>
+</head>
+<body class="bodydiv">
+<div class="header">
+    <div id='cssmenu' >
+            <ul>
+                <li><a href='index.html'><span>明星卡市场</span></a></li>
+                <li><a href='mycard.html'><span>我的明星卡</span></a></li>
+                <li><a href='requestcard.html'><span>索要申请留言</span></a></li>
+                <li><a href='https://nebulas.io/cn/'><span>星云链官网</span></a></li>
+                <li><a href='aboutus.html'><span>关于我们</span></a></li>
+                <li><a href='https://github.com/nebulasio/WebExtensionWallet'><span>星云链web钱包插件</span></a></li>
+                <li><a href='https://nano.nebulas.io/'><span>星云链移动端钱包</span></a></li>
+            </ul>
+    </div>
+</div>
+<div class="get">
+    <div class="am-g">
+        <div class="am-u-lg-12">
+            <div class="set-size-button">
+                <button id="setSize">设置英雄个数</button>
+            </div>
+            <div class="get-title">
+                <div class="get_font_left"><h1>当前已经有</h1></div>
+                <div class="get_font_center" id="banner_num"></div>
+                <div class="get_font_rigth"><h1>位水浒英雄等您来领取</h1></div>
+            </div>
 
-<script type="text/javascript" src="js/supersubs.js"></script>
-<script type="text/javascript" src="js/quicksand.js"></script>
-<script type="text/javascript" src="js/quicksand_config.js"></script>
-<script type="text/javascript" src="js/ts-portfolio-slide.js"></script>
-<script type="text/javascript" src="js/tinynav.min.js"></script>
-<script type="text/javascript" src="js/scripts.js"></script>
+            <div class="font_line"><h1>收集水浒英雄，重回儿时梦想</h1></div>
 
-<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script>
-<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC2.js"></script>
-
-<!--[if lt IE 9]>
-  	<script type="text/javascript" src="js/html5.js"></script>
-    <![endif]-->
-<!--[if lt IE 8]>
-		<div style=' clear: both; text-align:center; position: relative;'>
-			<a href="../../windows.microsoft.com/en-US/internet-explorer/products/ie/home@ocid=ie6_countdown_bannercode"><img src="../../storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
-		</div>
-	<![endif]-->
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
-<body>
-<!-- <script>  
-    window._bd_share_config = {  
-        "common": {  
-            "bdSnsKey": {},  
-            "bdText": "我在玩一个非常有意思的区块链养葫芦娃游戏，基于星云链的DAPP，地址是http://wskf.xyz/huluwa,一起来领葫芦娃吧~",  
-            "bdMini": "2",  
-            "bdMiniList": false,  
-            "bdPic": "",  
-            "bdStyle": "0",  
-            "bdSize": "16"  
-        },  
-        "slide": {  
-            "type": "slide",  
-            "bdImg": "1",  
-            "bdPos": "right",  
-            "bdTop": "151.5"  
-        },  
-        "image": {  
-            "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],  
-            "viewText": "分享到",  
-            "viewSize": "16"  
-        },  
-        "selectShare": {  
-            "bdContainerClass": null,  
-            "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]  
-        }  
-    };  
-    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];  
-</script>  -->
-<!-- LOADER -->
-<div class="spinner"></div>
-<!-- SLIDER -->
-<ul class="cb-slideshow">
-  <li><span>Image 01</span></li>
-  <li><span>Image 02</span></li>
-  <li><span>Image 03</span></li>
-  <li><span>Image 04</span></li>
-</ul>
-<!-- SLIDER END -->
-
-<section id="content">
-  <!-- HEADER -->
-  <header>
-    <div class="logo"><a href="#!/page_home"><img src="images/logo.png" alt="" /></a></div>
-    <!-- MENU -->
-    <nav class="menu">
-      <ul id="menu">
-        <li><a href="#!/page_home">主页</a></li>
-        <li><a href="#!/page_about">图鉴与帮助</a>
-          <ul class="submenu_1">
-            <li><a href="#!/page_more">Profile</a></li>
-            <li><a href="#!/page_more">Mission</a></li>
-          </ul>
-        </li>
-        <li><a href="#!/page_services">球星卡市场</a></li>
-        <li><a href="#!/page_portfolio">我的球星卡</a></li>
-        <li><a href="#!/page_prices">索要申请</a></li>
-        <li><a href="#!/page_blog">星云链简介</a></li>
-        <li class="no_bg"><a href="#!/page_contact">联系我们</a></li>
-      </ul>
-    </nav>
-    <!-- END MENU -->
-  </header>
-  <!-- END HEADER -->
-  <ul>
-    <li id="page_home" class="no_bg"></li>
-    <!-- ABOUT -->
-    <li id="page_about"> <a href="#!/page_home" class="close"></a>
-      <div class="container">
-        <div class="wrapper">
-          <h1 class="color_yellow">游戏介绍</h1>
-          <div class="viewport viewport2">
-            <div class="overview overview2">
-              <div class="fullwidth"> <img src="images/about/pic1.jpg" class="fleft20 pic" alt="" />
-                <h4 class="color_white">帮助教程</h4>
-                <p>游戏会初始化12张（以后会不断扩展，合约已支持）球星卡，没有被领取的球星卡可以被任意一个玩家所领取。</p>
-                <p>球星卡被领取后不可被另外玩家重复领取，但是该球星卡所有者可以转账给其他人，其他人也可以向所有者申请该球星卡。</p>
-                <p>索要球星卡可以给卡片所有者留言，所有人同意后方可转让成功。</p>
-                <p>卡片数量有限，支持动态增发，选择你中意的球星，赶紧来认领吧。</p> </div>
+            <div class="icon-xingyun-wrapper">
+                <div class="icon-xingyun">
+                        <span>
+                            <img src="./img/icon-xingyun1.png">
+                        </span>
+                </div>
                 <div class="noExtension" id="noExtension">
-                    友情提示：使用前请确保已经安装<a target="_blank" href=" ">星云链钱包</a > 喔~
+                                友情提示：使用前请确保已经安装<a target="_blank" href="https://github.com/ChengOrangeJu/WebExtensionWallet">星云链钱包</a> 喔~
                 </div>
-              <div class="divider"></div>
-              <h2 class="color_yellow">目前出场人物介绍</h2>
-              <div class="one_fourth"> <img src="images/about/pic2.jpg" class="pic" alt="" />
-                <h5 class="color_white ucase">巴西队：内马尔</h5>
-                <p>在2018俄罗斯世界杯预选赛中，内马尔带领桑巴军团一鼓作气，连战连捷，提前四轮突出重围，成为除东道主俄罗斯外的首支晋级决赛圈的球队。</p>
-              </div>
-              <div class="one_fourth"> <img src="images/about/pic3.jpg" class="pic" alt="" />
-                <h5 class="color_white ucase">阿根廷：梅西</h5>
-                <p>本已经看似无缘俄罗斯世界杯的阿根廷最终又因梅西而获得拯救，梅西在最后一轮以一己之力将阿根廷从死亡边缘拉回并送上通往俄罗斯的快车。</p>
-              </div>
-              <div class="one_fourth"> <img src="images/about/pic4.jpg" class="pic" alt="" />
-                <h5 class="color_white ucase">葡萄牙：C罗</h5>
-                <p>葡萄牙在世界杯上的最好成绩是季军，那时葡萄牙的当家巨星是“黑豹”尤西比奥。C罗在世界杯的赛场上仍需要追赶前辈，2018是他超越前人的最后机会了。</p>
-              </div>
-              <div class="one_fourth_last"> <img src="images/about/pic5.jpg" class="pic" alt="" />
-                <h5 class="color_white ucase">法国：博格巴</h5>
-                <p>当博格巴在2016年夏季顶着1.05亿欧的身价从尤文图斯回归曼联时，无数人心存质疑。但是当看到今年夏天转会窗里的疯狂泡沫，再看他给曼联带来的改变时.</p>
-              </div>
-                
-              <div class="one_fourth"> <img src="images/about/pic6.jpg" class="pic" alt="" />
-                <h5 class="color_white ucase">德国：穆勒</h5>
-                <p>2018俄罗斯世界杯将是他一步步向纪录逼近的舞台，作为卫冕冠军，德国队的实力毋庸置疑，穆勒突破前辈克洛泽的纪录并不是痴人说梦。</p>
-              </div>
-              <div class="one_fourth"> <img src="images/about/pic7.jpg" class="pic" alt="" />
-                <h5 class="color_white ucase">西班牙：伊涅斯塔</h5>
-                <p>2018年，伊涅斯塔将34岁，俄罗斯世界杯或许是这名“老将”最后一次站在世界杯舞台之上，球迷们能多看一眼都是幸福的。</p>
-              </div>
-              <div class="one_fourth"> <img src="images/about/pic8.jpg" class="pic" alt="" />
-                <h5 class="color_white ucase">英格兰：凯恩</h5>
-                <p>表现如此优异的前锋已经引起皇家马德里的关注，如果能够在世界杯的舞台上有所作为，势必将打破英超球员转出转会费纪录。</p>
-              </div>
-              <div class="one_fourth_last"> <img src="images/about/pic9.jpg" class="pic" alt="" />
-                <h5 class="color_white ucase">比利时：阿扎尔</h5>
-                <p>欧洲红魔比利时攻击线实力超群，拥有强力中锋卢卡库、欧洲助攻王德布劳内、比肩梅罗的阿扎尔等等，但其中最强的爆点当属阿扎尔。</p>
-              </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-              <div class="one_fourth"> <img src="images/about/pic10.jpg" class="pic" alt="" />
-                <h5 class="color_white ucase">克罗地亚：莫德里奇</h5>
-                <p>莫德里奇转会皇马5年之间帮助球队夺得3座欧冠，成为球队中场一场倚重的大腿。2018年他将33岁，俄罗斯世界杯或许是他最后一次创造荣誉的时刻。</p>
-              </div>
-              <div class="one_fourth"> <img src="images/about/pic11.jpg" class="pic" alt="" />
-                <h5 class="color_white ucase">乌拉圭：苏亚雷斯</h5>
-                <p>作为乌拉圭的主力前锋，苏亚雷斯代表乌拉圭参加了过去两届世界杯，成为世界杯上的话题人物，他在场上总能有令人惊讶的演出。</p>
-              </div>
-              <div class="one_fourth"> <img src="images/about/pic12.jpg" class="pic" alt="" />
-                <h5 class="color_white ucase">韩国：孙兴慜</h5>
-                <p>孙兴慜是当今的亚洲第一前锋，他是最好的亚洲球员，并且是韩国队的进攻核心，2018世界杯上期待他的优秀表现。</p>
-              </div>
-              <div class="one_fourth_last"> <img src="images/about/pic13.jpg" class="pic" alt="" />
-                <h5 class="color_white ucase">德国：厄齐尔</h5>
-                <p>虽然在阿森纳的表现备受批评，但厄齐尔却将是德国队的重要核心，特别是在一个糟糕的赛季后，他肯定憋足了一股劲。</p>
-              </div>
+<div class="am-g am-imglist">
+    <ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
+  am-avg-md-3 am-avg-lg-6 am-gallery-default">
+        <li>
+            <div class="am-gallery-item am_list_block">
+                <a href="###" class="am_img_bg">
+                    <img class="am_img animated" src="img/loading.gif"
+                         data-original="images/services/pic2.jpg"
+                         alt="远方 有一个地方 那里种有我们的梦想"
+                         data-toggle="popover" 
+                         title="巴西队：内马尔" 
+                         data-content="在2018俄罗斯世界杯预选赛中，内马尔带领桑巴军团一鼓作气，连战连捷，提前四轮突出重围，成为除东道主俄罗斯外的首支晋级决赛圈的球队。"/>
+                </a>
             </div>
-          </div>
-          <div class="scrollbar scrollbar2">
-            <div class="track">
-              <div class="thumb thumb2"></div>
+            <div id="0">
+                <button class="get-button btn btn-primary">领取</button>
+                <button type="button" class="send-button btn btn-danger">赠送</button>
             </div>
-          </div>
-        </div>
-      </div>
-    </li>
-     <!-- ABOUT END -->
-     <!-- SERVICES -->
-    <li id="page_services" class="market_page"> <a href="#!/page_home" class="close"></a>
-      <div class="container">
-        <div class="wrapper">
-          <span class="color_yellow">您的钱包地址（作为唯一用户标识): </span>
-          <span class="color_white" id="w_address">钱包地址获取中...(如果长时间未获取请刷新)</span>
-          <div class="viewport viewport2">
-            <div class="overview overview2">
-              <div id="ts-display-portfolio">
-                <ul id="ts-display-pf-col" class="image-grid">
-                  <li data-id="id-1" class="salads">
-                    <div class="ts-display-pf-img"> <span class="pftag">巴西队：内马尔</span><img src="images/services/pic2.jpg" alt="" class="cover" />
-                      <div class="caption_slide ">
-                        <p class="button small yellow-p">该球星卡还没有主人,赶紧来领取吧~</p>
-                        <br>
-                        <a class="button small yellow" id="0"><span>领取</span></a> </div>
-                    </div>
-                  </li>
-                  <li data-id="id-2" class="drinks">
-                    <div class="ts-display-pf-img"> <span class="pftag">阿根廷：梅西</span><img src="images/services/pic3.jpg" alt="" class="cover" />
-                      <div class="caption_slide ">
-                        <p class="button small yellow-p">该球星卡还没有主人,赶紧来领取吧~</p>
-                        <br>
-                        <a class="button small yellow" id="1"><span>领取</span></a> </div>
-                    </div>
-                  </li>
-                  <li data-id="id-3" class="chicken nomargin">
-                    <div class="ts-display-pf-img"> <span class="pftag">葡萄牙：C罗</span><img src="images/services/pic4.jpg" alt="" class="cover" />
-                      <div class="caption_slide ">
-                          <p class="button small yellow-p">该球星卡还没有主人,赶紧来领取吧~</p>
-                          <br>
-                          <a class="button small yellow" id="2"><span>领取</span></a> </div>
-                    </div>
-                  </li>
-                  <li data-id="id-4" class="drinks ">
-                    <div class="ts-display-pf-img"> <span class="pftag">法国：博格巴</span><img src="images/services/pic5.jpg" alt="" class="cover" />
-                      <div class="caption_slide ">
-                          <p class="button small yellow-p">该球星卡还没有主人,赶紧来领取吧~</p>
-                          <br>
-                          <a class="button small yellow" id="3"><span>领取</span></a> </div>
-                    </div>
-                  </li>
-                  <li data-id="id-5" class="chicken">
-                    <div class="ts-display-pf-img"> <span class="pftag">德国：穆勒</span><img src="images/services/pic6.jpg" alt="" class="cover" />
-                      <div class="caption_slide ">
-                          <p class="button small yellow-p">该球星卡还没有主人,赶紧来领取吧~</p>
-                          <br>
-                          <a class="button small yellow" id="4"><span>领取</span></a> </div>
-                    </div>
-                  </li>
-                  <li data-id="id-6" class="salads nomargin">
-                    <div class="ts-display-pf-img"> <span class="pftag">西班牙：伊涅斯塔</span><img src="images/services/pic7.jpg" alt="" class="cover" />
-                      <div class="caption_slide ">
-                          <p class="button small yellow-p">该球星卡还没有主人,赶紧来领取吧~</p>
-                          <br>
-                          <a class="button small yellow" id="5"><span>领取</span></a> </div>
-                    </div>
-                  </li>
-                  <li data-id="id-7" class="chicken">
-                    <div class="ts-display-pf-img"> <span class="pftag">英格兰：凯恩</span><img src="images/services/pic8.jpg" alt="" class="cover" />
-                      <div class="caption_slide ">
-                          <p class="button small yellow-p">该球星卡还没有主人,赶紧来领取吧~</p>
-                          <br>
-                          <a class="button small yellow" id="6"><span>领取</span></a> </div>
-                    </div>
-                  </li>
-                  <li data-id="id-8" class="salads">
-                    <div class="ts-display-pf-img"> <span class="pftag">比利时：阿扎尔</span><img src="images/services/pic9.jpg" alt="" class="cover" />
-                      <div class="caption_slide ">
-                          <p class="button small yellow-p">该球星卡还没有主人,赶紧来领取吧~</p>
-                          <br>
-                          <a class="button small yellow" id="7"><span>领取</span></a> </div>
-                    </div>
-                  </li>
-                  <li data-id="id-9" class="drinks nomargin">
-                    <div class="ts-display-pf-img"> <span class="pftag">克罗地亚：莫德里奇</span><img src="images/services/pic10.jpg" alt="" class="cover" />
-                      <div class="caption_slide ">
-                          <p class="button small yellow-p">该球星卡还没有主人,赶紧来领取吧~</p>
-                          <br>
-                          <a class="button small yellow" id="8"><span>领取</span></a> </div>
-                    </div>
-                  </li>
-                  <li data-id="id-10" class="drinks">
-                    <div class="ts-display-pf-img"> <span class="pftag">乌拉圭：苏亚雷斯</span><img src="images/services/pic11.jpg" alt="" class="cover" />
-                      <div class="caption_slide ">
-                          <p class="button small yellow-p">该球星卡还没有主人,赶紧来领取吧~</p>
-                          <br>
-                          <a class="button small yellow" id="9"><span>领取</span></a> </div>
-                    </div>
-                  </li>
-                  <li data-id="id-11" class="salads">
-                    <div class="ts-display-pf-img"> <span class="pftag">韩国：孙兴慜</span><img src="images/services/pic12.jpg" alt="" class="cover" />
-                      <div class="caption_slide ">
-                          <p class="button small yellow-p">该球星卡还没有主人,赶紧来领取吧~</p>
-                          <br>
-                          <a class="button small yellow" id="10"><span>领取</span></a> </div>
-                    </div>
-                  </li>
-                  <li data-id="id-12" class="chicken nomargin">
-                    <div class="ts-display-pf-img"> <span class="pftag">德国：厄齐尔</span><img src="images/services/pic13.jpg" alt="" class="cover" />
-                      <div class="caption_slide ">
-                          <p class="button small yellow-p">该球星卡还没有主人,赶紧来领取吧~</p>
-                          <br>
-                          <a class="button small yellow" id="11"><span>领取</span></a> </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+            <a class="am_imglist_user"><span class="am_imglist_user_ico"> Owner：</span><span
+                    class="  am_imglist_user_font2">该英雄暂无主人，赶紧来领取吧！</span></a>
+        </li>
+        <li>
+            <div class="am-gallery-item am_list_block">
+                <a href="###" class="am_img_bg">
+                    <img class="am_img animated" src="img/loading.gif"
+                         data-original="images/services/pic3.jpg"
+                         alt="远方 有一个地方 那里种有我们的梦想"
+                         data-toggle="popover" 
+                         title="阿根廷：梅西" 
+                         data-content="本已经看似无缘俄罗斯世界杯的阿根廷最终又因梅西而获得拯救，梅西在最后一轮以一己之力将阿根廷从死亡边缘拉回并送上通往俄罗斯的快车。"/>
+                </a>
             </div>
-          </div>
-          <div class="scrollbar scrollbar2">
-            <div class="track">
-              <div class="thumb thumb2"></div>
+            <div id="1">
+                <button class="get-button btn btn-primary">领取</button>
+                <button type="button" class="send-button btn btn-danger">赠送</button>
             </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <!-- SERVICES END -->
-    <!-- PORTFOLIO -->
-    <li id="page_portfolio" class="my_page"> <a href="#!/page_home" class="close"></a>
-      <div class="container">
-        <div class="wrapper">
-          <h1 class="color_yellow">球星卡卡包</h1>
-          <div class="viewport viewport2">
-              <div class="overview overview2">
-                  <div id="ts-display-portfolio">
-                    <ul id="ts-display-pf-col" class="image-grid">
-                      <li data-id="id-1" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">巴西队：内马尔</span><img src="images/services/pic2.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                            <br>
-                            <a class="button small yellow" id="0"><span>转赠</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-2" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">阿根廷：梅西</span><img src="images/services/pic3.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                            <br>
-                            <a class="button small yellow" id="1"><span>转赠</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-3" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">葡萄牙：C罗</span><img src="images/services/pic4.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <br>
-                              <a class="button small yellow" id="2"><span>转赠</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-4" class="salads ">
-                        <div class="ts-display-pf-img"> <span class="pftag">法国：博格巴</span><img src="images/services/pic5.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <br>
-                              <a class="button small yellow" id="3"><span>转赠</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-5" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">德国：穆勒</span><img src="images/services/pic6.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <br>
-                              <a class="button small yellow" id="4"><span>转赠</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-6" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">西班牙：伊涅斯塔</span><img src="images/services/pic7.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <br>
-                              <a class="button small yellow" id="5"><span>转赠</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-7" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">英格兰：凯恩</span><img src="images/services/pic8.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <br>
-                              <a class="button small yellow" id="6"><span>转赠</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-8" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">比利时：阿扎尔</span><img src="images/services/pic9.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <br>
-                              <a class="button small yellow" id="7"><span>转赠</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-9" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">克罗地亚：莫德里奇</span><img src="images/services/pic10.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <br>
-                              <a class="button small yellow" id="8"><span>转赠</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-10" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">乌拉圭：苏亚雷斯</span><img src="images/services/pic11.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <br>
-                              <a class="button small yellow" id="9"><span>转赠</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-11" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">韩国：孙兴慜</span><img src="images/services/pic12.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <br>
-                              <a class="button small yellow" id="10"><span>转赠</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-12" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">德国：厄齐尔</span><img src="images/services/pic13.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <br>
-                              <a class="button small yellow" id="11"><span>转赠</span></a> </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-          </div>
-          <div class="scrollbar scrollbar2">
-            <div class="track">
-              <div class="thumb thumb2"></div>
+            <a class="am_imglist_user"><span class="am_imglist_user_ico"> Owner：</span><span
+                    class="  am_imglist_user_font2">该英雄暂无主人，赶紧来领取吧！ </span></a>
+        </li>
+        <li>
+            <div class="am-gallery-item am_list_block">
+                <a href="###" class="am_img_bg">
+                    <img class="am_img animated" src="img/loading.gif"
+                         data-original="images/services/pic4.jpg"
+                         alt="远方 有一个地方 那里种有我们的梦想"
+                         data-toggle="popover" 
+                         title="葡萄牙：C罗" 
+                         data-content="葡萄牙在世界杯上的最好成绩是季军，那时葡萄牙的当家巨星是“黑豹”尤西比奥。C罗在世界杯的赛场上仍需要追赶前辈，2018是他超越前人的最后机会了。"/>
+                </a>
             </div>
-          </div>
-        </div>
-      </div>     
-    </li>
-    <!-- PORTFOLIO END -->
-    <!-- PRICE -->
-    <li id="page_prices" class="request_page"> <a href="#!/page_home" class="close"></a>
-      <div class="container">
-        <div class="wrapper">
-          <span class="color_yellow">申请列表 </span>
-          <span class="color_white">(如有用其他用户申请你正在拥有的球星卡，那么就会显示在这里)</span>
-          <div class="viewport viewport2">
-            <div class="overview overview2">
-              <div id="ts-display-portfolio">
-                  <ul id="ts-display-pf-col" class="image-grid">
-                      <li data-id="id-1" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">巴西队：内马尔</span><img src="images/services/pic2.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                            <p class="request_tip_p"></p>
-                            <br>
-                            <a class="button small yellow" id="0"><span>同意赠送</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-2" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">阿根廷：梅西</span><img src="images/services/pic3.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                            <p class="request_tip_p"></p>
-                            <br>
-                            <a class="button small yellow" id="1"><span>同意赠送</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-3" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">葡萄牙：C罗</span><img src="images/services/pic4.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <p class="request_tip_p"></p>
-                              <br>
-                              <a class="button small yellow" id="2"><span>同意赠送</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-4" class="salads ">
-                        <div class="ts-display-pf-img"> <span class="pftag">法国：博格巴</span><img src="images/services/pic5.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <p class="request_tip_p"></p>
-                              <br>
-                              <a class="button small yellow" id="3"><span>同意赠送</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-5" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">德国：穆勒</span><img src="images/services/pic6.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <p class="request_tip_p"></p>
-                              <br>
-                              <a class="button small yellow" id="4"><span>同意赠送</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-6" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">西班牙：伊涅斯塔</span><img src="images/services/pic7.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <p class="request_tip_p"></p>
-                              <br>
-                              <a class="button small yellow" id="5"><span>同意赠送</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-7" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">英格兰：凯恩</span><img src="images/services/pic8.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <p class="request_tip_p"></p>
-                              <br>
-                              <a class="button small yellow" id="6"><span>同意赠送</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-8" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">比利时：阿扎尔</span><img src="images/services/pic9.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <p class="request_tip_p"></p>
-                              <br>
-                              <a class="button small yellow" id="7"><span>同意赠送</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-9" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">克罗地亚：莫德里奇</span><img src="images/services/pic10.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <p class="request_tip_p"></p>
-                              <br>
-                              <a class="button small yellow" id="8"><span>同意赠送</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-10" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">乌拉圭：苏亚雷斯</span><img src="images/services/pic11.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <p class="request_tip_p"></p>
-                              <br>
-                              <a class="button small yellow" id="9"><span>同意赠送</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-11" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">韩国：孙兴慜</span><img src="images/services/pic12.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <p class="request_tip_p"></p>
-                              <br>
-                              <a class="button small yellow" id="10"><span>同意赠送</span></a> </div>
-                        </div>
-                      </li>
-                      <li data-id="id-12" class="salads">
-                        <div class="ts-display-pf-img"> <span class="pftag">德国：厄齐尔</span><img src="images/services/pic13.jpg" alt="" class="cover" />
-                          <div class="caption_slide ">
-                              <p class="request_tip_p"></p>
-                              <br>
-                              <a class="button small yellow" id="11"><span>同意赠送</span></a> </div>
-                        </div>
-                      </li>
-                    </ul>
-              </div>
+            <div id="2">
+                <button class="get-button btn btn-primary">领取</button>
+                <button type="button" class="send-button btn btn-danger">赠送</button>
             </div>
-          </div>
-          <div class="scrollbar scrollbar2">
-            <div class="track">
-              <div class="thumb thumb2"></div>
+            <a class="am_imglist_user"><span class="am_imglist_user_ico"> Owner：</span><span
+                    class="  am_imglist_user_font2">该英雄暂无主人，赶紧来领取吧！ </span></a>
+        </li>
+        <li>
+            <div class="am-gallery-item am_list_block">
+                <a href="###" class="am_img_bg">
+                    <img class="am_img animated" src="img/loading.gif"
+                         data-original="images/services/pic5.jpg"
+                         alt="远方 有一个地方 那里种有我们的梦想"
+                         data-toggle="popover" 
+                         title="法国：博格巴" 
+                         data-content="当博格巴在2016年夏季顶着1.05亿欧的身价从尤文图斯回归曼联时，无数人心存质疑。但是当看到今年夏天转会窗里的疯狂泡沫，再看他给曼联带来的改变时."/>
+                </a>
             </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <!-- PRICE END -->
-    <!-- BLOG -->
-    <li id="page_blog"> <a href="#!/page_home" class="close"></a>
-      <div class="container">
-        <div class="wrapper">
-          <h1 class="color_yellow">星云链介绍</h1>
-          <div class="viewport viewport2">
-            <div class="overview overview2">
-              <div class="two_third">
-                <div class="post" style="height:200px;">
-                  <div class="postimg wang-xun-post"> <img src="images/blog/pic1.jpg" class="pic" alt="" /></div>
-                  <!-- <div class="entry-date">
-                    <div class="posttime">5 2018</div>
-                    <div class="postdate">25</div>
-                  </div> -->
-                  <div class="col02">
-                    <p class="posttitle">星云链是全球首个区块链搜索引擎，发掘区块链价值新维度。通过定义区块链世界的基本价值尺度，帮助用户更高效地发现和使用区块链上日渐丰富的的价值信息。</p>
-                    <p>星云链（NAS）意图构建一个能够量化价值尺度、具备自进化能力，并能促进区块链生态建设的区块链系统，主要包括：定义价值尺度的星云指数 Nebulas Rank(NR) ，支持核心协议和智能合约链上升级的星云原力 Nebulas Force(NF) ，开发者激励协议 Developer Incentive Protocol(DIP) ，贡献度证明共识算法 Proof of Devotion(PoD)，去中心化应用的搜索引擎 。通过星云指数Nebulas Rank(NR) 、星云原力 Nebulas Force(NF)、贡献度证明共识算法Proof of Devotion(PoD)，去中心化应用搜索引擎四个模块搭建能实现价值尺度量化、具备自进化能力，并促进区块链生态建设的区块链系统。</p>
-                    <p>星云链中文官方网站: <a href="https://nebulas.io/cn/">https://nebulas.io/cn/</a></p>
-                  </div>
-                </div>
-                <div class="divider" style="margin-top:20px;"></div>
-              </div>
+            <div id="3">
+                <button class="get-button btn btn-primary">领取</button>
+                <button type="button" class="send-button btn btn-danger">赠送</button>
             </div>
-          </div>
-          <div class="scrollbar scrollbar2">
-            <div class="track">
-              <div class="thumb thumb2"></div>
+            <a class="am_imglist_user"><span class="am_imglist_user_ico"> Owner：</span><span
+                    class="  am_imglist_user_font2">该英雄暂无主人，赶紧来领取吧！ </span></a>
+        </li>
+        <li>
+            <div class="am-gallery-item am_list_block">
+                <a href="###" class="am_img_bg">
+                    <img class="am_img animated" src="img/loading.gif"
+                         data-original="images/services/pic6.jpg"
+                         alt="远方 有一个地方 那里种有我们的梦想"
+                         data-toggle="popover" 
+                         title="德国：穆勒" 
+                         data-content="2018俄罗斯世界杯将是他一步步向纪录逼近的舞台，作为卫冕冠军，德国队的实力毋庸置疑，穆勒突破前辈克洛泽的纪录并不是痴人说梦。"/>
+                </a>
             </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <!-- BLOG ENG -->
-    <!-- CONTACT -->
-    <li id="page_contact"> <a href="#!/page_home" class="close"></a>
-      <div class="container ">
-        <div class="wrapper">
-          <h1 class="color_yellow">关于我们</h1>
-          <article class="one_half">
-            <h2 class="color_white">团队介绍</h2>
-            <p class="contact_content">Tiger是一个专注区块链上层DAPP应用开发的兴趣小组，热衷于开发区块链应用。
-               欢迎志同道合的同学联系我们共同探讨区块链话题。<br></p>
-            <p> 
-              E-mail: <a href="#" class="link" style="font-weight:normal;">9267096314@qq.com</a></p>
-          </article>
-        </div>
-      </div>
-    </li>
-    <!-- CONTACT END -->
-  </ul>
-  <!-- FOOTER -->
-  <footer>
-    <p>2018 &copy; <a href="#" class="link">Flower</a>. All Right Reserved. </p>
-    
-  </footer>
-  <!-- END FOOTER -->
-</section>
-<!-- END CONTENT -->
+            <div id="4">
+                <button class="get-button btn btn-primary">领取</button>
+                <button type="button" class="send-button btn btn-danger">赠送</button>
+            </div>
+            <a class="am_imglist_user"><span class="am_imglist_user_ico"> Owner：</span><span
+                    class="  am_imglist_user_font2">该英雄暂无主人，赶紧来领取吧！ </span></a>
+        </li>
+        <li>
+            <div class="am-gallery-item am_list_block">
+                <a href="###" class="am_img_bg">
+                    <img class="am_img animated" src="img/loading.gif"
+                         data-original="images/services/pic7.jpg"
+                         alt="远方 有一个地方 那里种有我们的梦想"
+                         data-toggle="popover" 
+                         title="西班牙：伊涅斯塔" 
+                         data-content="2018年，伊涅斯塔将34岁，俄罗斯世界杯或许是这名“老将”最后一次站在世界杯舞台之上，球迷们能多看一眼都是幸福的。"/>
+                </a>
+            </div>
+            <div id="5">
+                <button class="get-button btn btn-primary">领取</button>
+                <button type="button" class="send-button btn btn-danger">赠送</button>
+            </div>
+            <a class="am_imglist_user"><span class="am_imglist_user_ico"> Owner：</span><span
+                    class="  am_imglist_user_font2">该英雄暂无主人，赶紧来领取吧！ </span></a>
+        </li>
+        <li>
+            <div class="am-gallery-item am_list_block">
+                <a href="###" class="am_img_bg">
+                    <img class="am_img animated" src="img/loading.gif"
+                         data-original="images/services/pic8.jpg"
+                         alt="远方 有一个地方 那里种有我们的梦想"
+                         data-toggle="popover" 
+                         title="英格兰：凯恩" 
+                         data-content="表现如此优异的前锋已经引起皇家马德里的关注，如果能够在世界杯的舞台上有所作为，势必将打破英超球员转出转会费纪录。"/>
+                </a>
+            </div>
+            <div id="6">
+                <button class="get-button btn btn-primary">领取</button>
+                <button type="button" class="send-button btn btn-danger">赠送</button>
+            </div>
+            <a class="am_imglist_user"><span class="am_imglist_user_ico"> Owner：</span><span
+                    class="  am_imglist_user_font2">该英雄暂无主人，赶紧来领取吧！ </span></a>
+        </li>
+        <li>
+            <div class="am-gallery-item am_list_block">
+                <a href="###" class="am_img_bg">
+                    <img class="am_img animated" src="img/loading.gif"
+                         data-original="images/services/pic9.jpg"
+                         alt="远方 有一个地方 那里种有我们的梦想"
+                         data-toggle="popover" 
+                         title="比利时：阿扎尔" 
+                         data-content="欧洲红魔比利时攻击线实力超群，拥有强力中锋卢卡库、欧洲助攻王德布劳内、比肩梅罗的阿扎尔等等，但其中最强的爆点当属阿扎尔。"/>
+                </a>
+            </div>
+            <div id="7">
+                <button class="get-button btn btn-primary">领取</button>
+                <button type="button" class="send-button btn btn-danger">赠送</button>
+            </div>
+            <a class="am_imglist_user"><span class="am_imglist_user_ico"> Owner：</span><span
+                    class="  am_imglist_user_font2">该英雄暂无主人，赶紧来领取吧！ </span></a>
+        </li>
+        <li>
+            <div class="am-gallery-item am_list_block">
+                <a href="###" class="am_img_bg">
+                    <img class="am_img animated" src="img/loading.gif"
+                         data-original="images/services/pic10.jpg"
+                         alt="远方 有一个地方 那里种有我们的梦想"
+                         data-toggle="popover" 
+                         title="克罗地亚：莫德里奇" 
+                         data-content="莫德里奇转会皇马5年之间帮助球队夺得3座欧冠，成为球队中场一场倚重的大腿。2018年他将33岁，俄罗斯世界杯或许是他最后一次创造荣誉的时刻。"/>
+                </a>
+            </div>
+            <div id="8">
+                <button class="get-button btn btn-primary">领取</button>
+                <button type="button" class="send-button btn btn-danger">赠送</button>
+            </div>
+            <a class="am_imglist_user"><span class="am_imglist_user_ico"> Owner：</span><span
+                    class="  am_imglist_user_font2">该英雄暂无主人，赶紧来领取吧！ </span></a>
+        </li>
+        <li>
+            <div class="am-gallery-item am_list_block">
+                <a href="###" class="am_img_bg">
+                    <img class="am_img animated" src="img/loading.gif"
+                         data-original="images/services/pic11.jpg"
+                         alt="远方 有一个地方 那里种有我们的梦想"
+                         data-toggle="popover" 
+                         title="乌拉圭：苏亚雷斯" 
+                         data-content="作为乌拉圭的主力前锋，苏亚雷斯代表乌拉圭参加了过去两届世界杯，成为世界杯上的话题人物，他在场上总能有令人惊讶的演出。"/>
+                </a>
+            </div>
+            <div id="9">
+                <button class="get-button btn btn-primary">领取</button>
+                <button type="button" class="send-button btn btn-danger">赠送</button>
+            </div>
+            <a class="am_imglist_user"><span class="am_imglist_user_ico"> Owner：</span><span
+                    class="  am_imglist_user_font2">该英雄暂无主人，赶紧来领取吧！ </span></a>
+        </li>
+        <li>
+            <div class="am-gallery-item am_list_block">
+                <a href="###" class="am_img_bg">
+                    <img class="am_img animated" src="img/loading.gif"
+                         data-original="images/services/pic12.jpg"
+                         alt="远方 有一个地方 那里种有我们的梦想"
+                         data-toggle="popover" 
+                         title="韩国：孙兴慜" 
+                         data-content="孙兴慜是当今的亚洲第一前锋，他是最好的亚洲球员，并且是韩国队的进攻核心，2018世界杯上期待他的优秀表现。"/>
+                </a>
+            </div>
+            <div id="10">
+                <button class="get-button btn btn-primary">领取</button>
+                <button type="button" class="send-button btn btn-danger">赠送</button>
+            </div>
+            <a class="am_imglist_user"><span class="am_imglist_user_ico"> Owner：</span><span
+                    class="  am_imglist_user_font2">该英雄暂无主人，赶紧来领取吧！ </span></a>
+        </li>
+        <li>
+            <div class="am-gallery-item am_list_block">
+                <a href="###" class="am_img_bg">
+                    <img class="am_img animated" src="img/loading.gif"
+                         data-original="images/services/pic13.jpg"
+                         alt="远方 有一个地方 那里种有我们的梦想"
+                         data-toggle="popover" 
+                         title="德国：厄齐尔" 
+                         data-content="虽然在阿森纳的表现备受批评，但厄齐尔却将是德国队的重要核心，特别是在一个糟糕的赛季后，他肯定憋足了一股劲。"/>
+                </a>
+            </div>
+            <div id="11">
+                <button class="get-button btn btn-primary">领取</button>
+                <button type="button" class="send-button btn btn-danger">赠送</button>
+            </div>
+            <a class="am_imglist_user"><span class="am_imglist_user_ico"> Owner：</span><span
+                    class="  am_imglist_user_font2">该英雄暂无主人，赶紧来领取吧！ </span></a>
+        </li>
 
+    </ul>
+</div>
+<footer class="am_footer">
+    <div class="am_footer_con">
+        <div class="am_footer_link">
+            <span>关于我们</span>
+            <dd>same-flower工作小组是一个区块链应用开发兴趣小组，致力于开发出更多更优质的DAPP，欢迎大家提宝贵意见和建议，邮箱same4869@126.com</dd>
+        </div>
+
+
+        <div class="am_footer_don">
+            <span>收集说明</span>
+            <dl>
+                <dd>水浒风云变幻，猛将谁与争锋！还记得小时候买过的小浣熊与小当家吗，没错，在这里您又能重拾儿时梦想了。基于星云链，拥有区块链的所有优点，去中心化，无法篡改，可追溯性强。
+                    <br>在合约部署完成时所有卡片均无主人，这时候任何玩家可以获得这张卡片的拥有权，并且能被所有人看到，类似比特币交易，拥有卡片的人能够赠送给其他人，一张卡片只能有一个拥有者。
+                    <br>合约支持英雄不断更新，赠送与索要功能将持续完善，敬请期待。
+                </dd>
+            </dl>
+        </div>
+
+    </div>
+    <div class="am_info_line">Copyright(c)2018 <span>same-flower</span> All Rights Reserved.</div>
+</footer>
+<script src="js/petshow.js"></script>
 </body>
 </html>

@@ -83,7 +83,7 @@ $(function () {
         if (Qiuxings[i] && Qiuxings[i].owner) {
             $($(".market_page .button.small.yellow-p")[i]).text("TA的主人：" + Qiuxings[i].owner);
             if(curWallectAdd !== Qiuxings[i].owner){
-                $($(".my_page .salads")[i]).css("display", "none")
+                $($(".salads")[i]).css("display", "none")
                 $($(".market_page .button.small.yellow span")[i]).text("求赠送")
             }else{
                 $($(".market_page .button.small.yellow")[i]).css("display", "none");

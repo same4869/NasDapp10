@@ -1,0 +1,73 @@
+.popover-header {
+    background-color: #33bbff;
+}
+
+.icon-xingyun {
+    margin-top: 0px;
+}
+.icon-xingyun span img {
+    width: 100px;
+}
+.icon-xingyun-wrapper {
+    float: right;
+    margin-top: -80px;
+    margin-right: 5px;
+}
+.set-size-button {
+    float: right;
+    color: black;
+    visibility: hidden;
+}
+.get-button, .send-button {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.am_imglist_user_font2 {
+    word-wrap: break-word;
+}
+.am_footer {
+    padding: 0;
+}
+.am_footer_con {
+    padding: 0;
+}
+.am_footer_con dd {
+    position: relative;
+    font-size: 12px;
+    color: #787878;
+    padding: 0;
+    margin: 0;
+    margin-left: 45px;
+    margin-right: 45px;
+    float: none;
+    text-align: left;
+}
+.am_footer_link, .am_footer_don {
+    display: initial;
+    max-width: 1000px;
+}
+.am_footer_link span, .am_footer_don span {
+    margin-left: 45px;
+}
+.modal-header {
+    display: block;
+    background-color: #33bbff;
+}
+.bootbox-close-button {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+.bodydiv{
+    background: #a6d3fa;
+}
+.request_p{
+    margin-left: 20px;
+    font-size: 18px;
+    color: #000;
+}
